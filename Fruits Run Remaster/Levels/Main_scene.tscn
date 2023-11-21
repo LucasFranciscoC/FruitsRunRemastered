@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Script/Main_scene.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/ParallaxBackg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Fall_zone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Hud.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Default_room.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sounds/Music/fragment-of-tomorrow-131881.mp3" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 400 )
+
+[node name="Main_scene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 96, 416 )
+jump_speed = 800
+gravity_speed = 25
+
+[node name="ParallaxBackg" parent="." instance=ExtResource( 3 )]
+layer = -1
+offset = Vector2( 0, -60 )
+transform = Transform2D( 1, 0, 0, 1, 0, -60 )
+
+[node name="Hud" parent="." instance=ExtResource( 5 )]
+
+[node name="Area" type="Node2D" parent="."]
+
+[node name="Default_room" parent="Area" instance=ExtResource( 6 )]
+
+[node name="Wall_zone" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape2D" parent="Wall_zone"]
+position = Vector2( -3, 126 )
+shape = SubResource( 1 )
+
+[node name="Collision2" type="CollisionShape2D" parent="Wall_zone"]
+position = Vector2( 1030, 126 )
+shape = SubResource( 1 )
+
+[node name="Fall_zone" parent="." instance=ExtResource( 4 )]
+position = Vector2( 511, 619 )
+
+[node name="Backgrund_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.0
+bus = "Music"

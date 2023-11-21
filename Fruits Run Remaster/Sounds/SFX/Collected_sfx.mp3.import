@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Collected_sfx.mp3-686710f1a937d1e9f415ea55951c3d36.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SFX/Collected_sfx.mp3"
+dest_files=[ "res://.import/Collected_sfx.mp3-686710f1a937d1e9f415ea55951c3d36.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

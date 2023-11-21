@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprits/Itens/Collected.png" type="Texture" id=1]
+[ext_resource path="res://Script/Effect.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/SFX/Collected_sfx.mp3" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Collected"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[node name="Collected" type="Node2D"]
+script = ExtResource( 2 )
+destroy_anim = "Collected"
+
+[node name="Texture" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 6
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+autoplay = "Collected"
+anims/Collected = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="Collected_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+bus = "SFX"
+
+[connection signal="animation_finished" from="Anim" to="." method="_on_Anim_animation_finished"]

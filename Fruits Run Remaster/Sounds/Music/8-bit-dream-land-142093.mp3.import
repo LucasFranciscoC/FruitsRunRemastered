@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8-bit-dream-land-142093.mp3-012c4b5cac8ef218f9786715c30c9355.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music/8-bit-dream-land-142093.mp3"
+dest_files=[ "res://.import/8-bit-dream-land-142093.mp3-012c4b5cac8ef218f9786715c30c9355.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

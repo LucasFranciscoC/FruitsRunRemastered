@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprits/CutScene.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Script/CutScene.gd" type="Script" id=2]
+
+[node name="CutScene" type="VideoPlayer"]
+margin_left = -2.0
+margin_right = 1024.0
+margin_bottom = 600.0
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

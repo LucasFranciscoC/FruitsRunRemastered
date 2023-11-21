@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/Plat3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Plat1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Plat5.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Plat4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Item.tscn" type="PackedScene" id=5]
+
+[node name="Room_4" type="Node2D"]
+
+[node name="Item" parent="." instance=ExtResource( 5 )]
+position = Vector2( 222, 297 )
+type = 0
+
+[node name="Item2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 512, 160 )
+type = 0
+
+[node name="Item3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 792, 296 )
+type = 0
+
+[node name="Item4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 476, 498 )
+
+[node name="Item5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 540, 497 )
+
+[node name="Plat6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 516, 228 )
+
+[node name="Plat7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 795, 368 )
+
+[node name="Plat1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 368 )
+
+[node name="Plat3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 568 )
+
+[node name="Plat4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 160, 568 )
+
+[node name="Plat5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 864, 568 )
