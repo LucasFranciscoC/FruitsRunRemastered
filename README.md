@@ -29,7 +29,13 @@ Screen to Save
 <img src="/Github Image/Tela-de-Save.png"/>
 
 Use of accelerometer
-<img src="/Github Image/"/>
+<img src="/Github Image/Gyro.png"/>
+
+Options
+<img src="/Github Image/Tela-Opcoes.png"/>
+
+Ranking
+<img src="/Github Image/Ranking.png"/>
 
 ## How to run this project?
 If you use the mobile version, download it from:
