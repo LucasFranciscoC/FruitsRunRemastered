@@ -1,5 +1,5 @@
 # FruitsRunRemastered
-<img src=""/>
+<img src="/Github Image/Tela-Inicial.png"/>
 
 This is a project for a 2D platform game, with the aim of using the cell phone's accelerometer and being able to save the score made in the game in a database.
 
@@ -20,16 +20,16 @@ This is a project for a 2D platform game, with the aim of using the cell phone's
 
 ## Layout
 Home Screen
-<img src=""/>
+<img src="/Github Image/Tela-Inicial.png"/>
 
 In-game Screen
-<img src=""/>
+<img src="/Github Image/In-Game.png"/>
 
 Screen to Save
-<img src=""/>
+<img src="/Github Image/Tela-de-Save.png"/>
 
 Use of accelerometer
-<img src=""/>
+<img src="/Github Image/"/>
 
 ## How to run this project?
 If you use the mobile version, download it from:
